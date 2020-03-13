@@ -200,7 +200,7 @@ class PhysicalEllipse(PhysicalPoly):
         self.minor = b
         self.radius = b + int((a - b) / 2) # HACK: expect all objects to have radius
         points = []
-        ang = math.pi * 2 // segments
+        ang = math.pi * 2 / segments
         for seg in range(0, segments):
             points.append((a * math.cos(seg * ang), b * math.sin(seg * ang)))
 
